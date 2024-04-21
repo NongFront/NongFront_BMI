@@ -6,11 +6,7 @@ document.getElementById('registrationForm').addEventListener('submit', function(
     const weight = parseFloat(document.getElementById('weight').value);
     const selectedDate = document.getElementById('dateSelector').value;
 
-    // Check if a date is selected
-    if (!selectedDate) {
-        alert('โปรดเลือกวัน');
-        return; // Stop further execution
-    }
+ document.getElementById('dateSelector').valueAsDate = new Date();
 
     const bmi = calculateBMI(height, weight);
     const category = determineCategory(bmi);
